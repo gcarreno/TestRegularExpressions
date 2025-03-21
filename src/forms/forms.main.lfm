@@ -1,0 +1,122 @@
+object frmMain: TfrmMain
+  Left = 248
+  Height = 600
+  Top = 32
+  Width = 950
+  Caption = 'Test Regukar Expressions'
+  ClientHeight = 600
+  ClientWidth = 950
+  Constraints.MinHeight = 600
+  Constraints.MinWidth = 950
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  object gbRegEx: TGroupBox
+    Left = 0
+    Height = 58
+    Top = 0
+    Width = 950
+    Align = alTop
+    AutoSize = True
+    Caption = 'Regular Expression'
+    ClientHeight = 39
+    ClientWidth = 948
+    TabOrder = 0
+    object edtRegEx: TEdit
+      Left = 4
+      Height = 35
+      Top = 4
+      Width = 600
+      Align = alLeft
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 4
+      Constraints.MinWidth = 600
+      TabOrder = 0
+    end
+    object btnRegExRun: TButton
+      Left = 608
+      Height = 35
+      Top = 4
+      Width = 80
+      Action = actRegExRun
+      Align = alLeft
+      AutoSize = True
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 4
+      Constraints.MinWidth = 80
+      TabOrder = 1
+    end
+    object btnFileExit: TButton
+      Left = 692
+      Height = 35
+      Top = 4
+      Width = 80
+      Action = actFileExit
+      Align = alLeft
+      AutoSize = True
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 4
+      Constraints.MinWidth = 80
+      TabOrder = 2
+    end
+  end
+  object gbText: TGroupBox
+    Left = 0
+    Height = 174
+    Top = 58
+    Width = 950
+    Align = alTop
+    Caption = 'Text for Testing'
+    ClientHeight = 155
+    ClientWidth = 948
+    TabOrder = 1
+    object memText: TMemo
+      Left = 4
+      Height = 151
+      Top = 4
+      Width = 944
+      Align = alClient
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 4
+      ScrollBars = ssAutoVertical
+      TabOrder = 0
+    end
+  end
+  object gbLog: TGroupBox
+    Left = 0
+    Height = 368
+    Top = 232
+    Width = 950
+    Align = alClient
+    Caption = 'Log'
+    ClientHeight = 349
+    ClientWidth = 948
+    TabOrder = 2
+    object memLog: TMemo
+      Left = 4
+      Height = 345
+      Top = 4
+      Width = 944
+      Align = alClient
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 4
+      ReadOnly = True
+      ScrollBars = ssAutoVertical
+      TabOrder = 0
+    end
+  end
+  object alMain: TActionList
+    Left = 655
+    Top = 137
+    object actFileExit: TFileExit
+      Category = 'File'
+      Caption = 'E&xit'
+      Hint = 'Exit'
+    end
+    object actRegExRun: TAction
+      Category = 'RegEx'
+      Caption = '&Run'
+      OnExecute = actRegExRunExecute
+    end
+  end
+end
