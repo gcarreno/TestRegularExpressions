@@ -8,18 +8,18 @@ object frmMain: TfrmMain
   ClientWidth = 950
   Constraints.MinHeight = 600
   Constraints.MinWidth = 950
-  Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
+  Position = poScreenCenter
   object gbRegEx: TGroupBox
     Left = 0
-    Height = 58
+    Height = 120
     Top = 0
     Width = 950
     Align = alTop
     AutoSize = True
     Caption = 'Regular Expression'
-    ClientHeight = 39
+    ClientHeight = 101
     ClientWidth = 948
     TabOrder = 0
     object edtRegEx: TEdit
@@ -59,11 +59,45 @@ object frmMain: TfrmMain
       Constraints.MinWidth = 80
       TabOrder = 2
     end
+    object cgModifiers: TCheckGroup
+      Left = 4
+      Height = 54
+      Top = 43
+      Width = 940
+      Align = alBottom
+      AutoFill = True
+      AutoSize = True
+      BorderSpacing.Around = 4
+      Caption = 'Modifiers'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 6
+      ClientHeight = 35
+      ClientWidth = 938
+      Columns = 6
+      Items.Strings = (
+        'i - Case Sensitive'
+        'r - Russian Range'
+        's - Single Line Strings'
+        'g - Greediness'
+        'm - Multi Line Strings'
+        'x - Extended Syntax'
+      )
+      TabOrder = 3
+      Data = {
+        06000000020202020202
+      }
+    end
   end
   object gbText: TGroupBox
     Left = 0
     Height = 174
-    Top = 58
+    Top = 120
     Width = 950
     Align = alTop
     Caption = 'Text for Testing'
@@ -84,17 +118,17 @@ object frmMain: TfrmMain
   end
   object gbLog: TGroupBox
     Left = 0
-    Height = 368
-    Top = 232
+    Height = 306
+    Top = 294
     Width = 950
     Align = alClient
     Caption = 'Log'
-    ClientHeight = 349
+    ClientHeight = 287
     ClientWidth = 948
     TabOrder = 2
     object memLog: TMemo
       Left = 4
-      Height = 345
+      Height = 283
       Top = 4
       Width = 944
       Align = alClient
@@ -106,6 +140,7 @@ object frmMain: TfrmMain
     end
   end
   object alMain: TActionList
+    OnUpdate = alMainUpdate
     Left = 655
     Top = 137
     object actFileExit: TFileExit

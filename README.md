@@ -8,3 +8,10 @@
 [![Downloads](https://img.shields.io/github/downloads/gcarreno/TestRegularExpressions/total)](https://github.com/gcarreno/TestRegularExpressions/releases)
 
 This is an example on how to use regular expressions.
+
+For simplicity's sake, I'm only demonstrating the `Exec`/`ExecNext` functionality. There's more to it than just these two, like the `Substitute` and `Split` functionalities.
+
+I've also decided to use the `RegExpr` package that is provided in the packages that come by default with Free Pascal's compiler installation.
+You can have a better picture of other options in this entry of the Wiki: [Regular Expression Packages](https://wiki.freepascal.org/RegEx_packages)
+
+You can find some documentation about `TRegExpr` here: [TRegExpr Class](https://regex.sorokin.engineer/tregexpr).
